@@ -16,5 +16,10 @@ public class SaturnShadow : MonoBehaviour {
 	void Update () {
         this.transform.Rotate(new Vector3(0, 1f, 0), 0.2f);
         this.transform.Rotate(new Vector3(0, 0, 1f), 0.6f);
+
+        this.transform.Translate(Vector3.forward,Space.World);          //世界的Z轴
+        this.transform.Translate(Vector3.forward,Space.Self);           //自身的Z轴 正前方
+        this.transform.Translate(this.transform.forward, Space.World);  //自身的Z轴 正前方
+        this.transform.Translate(this.transform.forward, Space.Self);   //无法判断移动规律
     }
 }
