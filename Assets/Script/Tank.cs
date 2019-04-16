@@ -27,5 +27,6 @@ public class Tank : MonoBehaviour {
 	void Update () {
         //this.transform.Rotate(new Vector3(0,1,0), 3);
         this.transform.Rotate(new Vector3(0,0,1), 0.05f);
+        //Debug.Log(Input.mousePosition.x+"|"+Input.mousePosition.y + "|" + Input.mousePosition.z);
     }
 }
