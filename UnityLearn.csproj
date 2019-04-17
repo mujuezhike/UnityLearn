@@ -282,9 +282,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AutoDestroy.cs" />
     <Compile Include="Assets\Script\BaseRandom.cs" />
     <Compile Include="Assets\Script\BaseSphere.cs" />
     <Compile Include="Assets\Script\BehaviourScript.cs" />
+    <Compile Include="Assets\Script\BulletInner.cs" />
     <Compile Include="Assets\Script\CameraScript.cs" />
     <Compile Include="Assets\Script\CmMoon.cs" />
     <Compile Include="Assets\Script\CmMoon2.cs" />
@@ -292,14 +294,20 @@
     <Compile Include="Assets\Script\Earth.cs" />
     <Compile Include="Assets\Script\Eye.cs" />
     <Compile Include="Assets\Script\Lunzi.cs" />
+    <Compile Include="Assets\Script\MissileGroup.cs" />
     <Compile Include="Assets\Script\PositionTest.cs" />
     <Compile Include="Assets\Script\RotateBase.cs" />
     <Compile Include="Assets\Script\RotateTest.cs" />
+    <Compile Include="Assets\Script\RotateY.cs" />
     <Compile Include="Assets\Script\Saturn.cs" />
     <Compile Include="Assets\Script\SaturnShadow.cs" />
     <Compile Include="Assets\Script\Sun.cs" />
     <Compile Include="Assets\Script\Sword.cs" />
     <Compile Include="Assets\Script\Tank.cs" />
+    <Compile Include="Assets\scripts\go.cs" />
+    <Compile Include="Assets\scripts\Move.cs" />
+    <Compile Include="Assets\scripts\shoot.cs" />
+    <Compile Include="Assets\scripts\Turn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
