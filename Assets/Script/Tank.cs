@@ -17,38 +17,41 @@ public class Tank : MonoBehaviour {
         //加载子弹
         //bullet = (GameObject)Resources.Load("Resources/Prefabs/Tank/Bullet");
 
-        int m = 10;
-        while( m > 0)
-        { 
-            for (int j = 0; j < m; j++)
-            {
-                for (int i = 0; i < m; i++)
-                {
-                    GameObject go = GameObject.Instantiate<GameObject>(cube);
-                    go.transform.position = new Vector3(5+ 1.1f * (j + 1)+(10-m)*0.55f, (10-m)*1.1f , 1.1f * (i + 1) + (10 - m) * 0.55f);
-                }
-            }
-            m--;
-        }
+        //int m = 10;
+        //while( m > 0)
+        //{ 
+        //    for (int j = 0; j < m; j++)
+        //    {
+        //        for (int i = 0; i < m; i++)
+        //        {
+        //            GameObject go = GameObject.Instantiate<GameObject>(cube);
+        //            go.transform.position = new Vector3(5+ 1.1f * (j + 1)+(10-m)*0.55f, (10-m)*1.1f , 1.1f * (i + 1) + (10 - m) * 0.55f);
+        //        }
+        //    }
+        //    m--;
+        //}
 
     }
 	
 	// Update is called once per frame
 	void Update () {
         
-        if (this.transform.rotation.y != 0
-            || this.transform.rotation.z != 0
-            || this.transform.position.y != 0)
+        if (this.transform.rotation.x > 0.01f || this.transform.rotation.x < -0.01f
+            || this.transform.rotation.z > 0.01f || this.transform.rotation.z < -0.01f
+            || this.transform.position.y > 0.230f || this.transform.position.y < 0.229f)
         {
-            //this.transform.Rotate(0, -this.transform.rotation.y, -this.transform.rotation.z);
-            //this.transform.Translate(0, -this.transform.position.y, 0);
+            //Vector3 rotationVector3 = new Vector3(0f, transform.rotation.y, 0f);
+            //Quaternion rotationq = Quaternion.Euler(rotationVector3);
+            //this.transform.rotation = rotationq;
+            //this.transform.Rotate(-this.transform.rotation.x,0, -this.transform.rotation.z);
+            this.transform.position = new Vector3(this.transform.position.x , 0.2293f , this.transform.position.z);
         }
         //this.transform.Rotate(new Vector3(0,1,0), 3);
         //this.transform.Rotate(new Vector3(0,0,1), 0.05f);
         //Debug.Log(Input.mousePosition.x+"|"+Input.mousePosition.y + "|" + Input.mousePosition.z);
         if (Input.GetKey("w"))
         {
-            this.transform.Translate(new Vector3(0.1f,0,0));
+            this.transform.Translate(new Vector3(10.1f * Time.deltaTime, 0,0));
         }
         if (Input.GetKey("a"))
         {
@@ -88,19 +91,19 @@ public class Tank : MonoBehaviour {
             
         }
 
-        if (Input.GetKey("m") && misslelate<=0)
-        {
-            GameObject go = GameObject.Instantiate<GameObject>(missile, this.transform.Find("Tank/GameObject").transform.position, this.transform.Find("Tank/GameObject").transform.rotation);
-            go.SetActive(true);
-            //go.transform.position = this.transform.Find("Tank/pao/paokou").transform.position;
-            //Debug.Log(this.transform.Find("Tank/pao/paokou").transform.position);
-            go.transform.LookAt(Vector3.up);
+        //if (Input.GetKey("m") && misslelate<=0)
+        //{
+        //    GameObject go = GameObject.Instantiate<GameObject>(missile, this.transform.Find("Tank/pao/paokou").transform.position, this.transform.Find("Tank/pao/paokou").transform.rotation);
+        //    go.SetActive(true);
+        //    //go.transform.position = this.transform.Find("Tank/pao/paokou").transform.position;
+        //    //Debug.Log(this.transform.Find("Tank/pao/paokou").transform.position);
+        //    go.transform.LookAt(this.transform.Find("Tank/pao/paodiraction"));
 
-            //bullet.transform.
-            //this.transform.Find("pao/paokou").position;
-            //this.transform.position;
-            misslelate = 100;
-        }
-        misslelate--;
+        //    //bullet.transform.
+        //    //this.transform.Find("pao/paokou").position;
+        //    //this.transform.position;
+        //    misslelate = 100;
+        //}
+        //misslelate--;
     }
 }

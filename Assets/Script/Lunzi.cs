@@ -11,6 +11,17 @@ public class Lunzi : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.Rotate(Vector3.down, 10);
+
+        if (Input.GetKey("w")
+            || Input.GetKey("s")
+            || Input.GetKey("d"))
+        {
+            this.transform.Rotate(Vector3.down, 10);
+        }
+
+        if (Input.GetKey("a"))
+        {
+            this.transform.Rotate(Vector3.up, 10);
+        }
     }
 }
