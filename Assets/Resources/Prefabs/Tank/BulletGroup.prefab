@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 136051405872338208}
   - component: {fileID: 23193951161538202}
   - component: {fileID: 114115610572587792}
+  - component: {fileID: 54862322946359080}
   m_Layer: 8
   m_Name: Bullet (1)
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 136815608292174650}
   - component: {fileID: 23136749487392588}
   - component: {fileID: 114537338134278780}
+  - component: {fileID: 54188157060090458}
   m_Layer: 8
   m_Name: Bullet (2)
   m_TagString: Untagged
@@ -93,6 +95,7 @@ GameObject:
   - component: {fileID: 136391539617284002}
   - component: {fileID: 23263475033033112}
   - component: {fileID: 114206942157954140}
+  - component: {fileID: 54508687808855368}
   m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
@@ -352,6 +355,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738802639146422}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54188157060090458
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675777896972580}
+  serializedVersion: 2
+  m_Mass: 33
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54508687808855368
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738802639146422}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54862322946359080
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347367764830684}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!96 &96069694164582392
 TrailRenderer:
   serializedVersion: 2
@@ -624,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1020d3f4ae723459fb77ad7cbc331b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expo: {fileID: 1815845440612350, guid: 9a68574cd36d0384a9ab81577e954d6b, type: 2}
+  expo: {fileID: 1323280678861352, guid: 1a67990d81237b541b69e8f7bd518d8a, type: 2}
 --- !u!114 &114206942157954140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -636,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1020d3f4ae723459fb77ad7cbc331b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expo: {fileID: 1815845440612350, guid: 9a68574cd36d0384a9ab81577e954d6b, type: 2}
+  expo: {fileID: 1323280678861352, guid: 1a67990d81237b541b69e8f7bd518d8a, type: 2}
 --- !u!114 &114537338134278780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -648,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1020d3f4ae723459fb77ad7cbc331b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expo: {fileID: 1815845440612350, guid: 9a68574cd36d0384a9ab81577e954d6b, type: 2}
+  expo: {fileID: 1323280678861352, guid: 1a67990d81237b541b69e8f7bd518d8a, type: 2}
 --- !u!114 &114916887265729376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604cfe296ea2bd94fbc0efcf76a2d720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expo: {fileID: 1815845440612350, guid: 9a68574cd36d0384a9ab81577e954d6b, type: 2}
+  expo: {fileID: 1323280678861352, guid: 1a67990d81237b541b69e8f7bd518d8a, type: 2}
   io: 30
   m: 5
   m1: 5

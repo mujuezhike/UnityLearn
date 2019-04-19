@@ -1,0 +1,13 @@
+Now you using optimized texture package, 
+where closed to road zones have 1024px 
+texture resolutions and far zones only 512px.
+
+If you developing project when constant 
+resolution textures needed, for example helicopter fly - 
+you can download 1024px texture package from my site:
+
+http://games.micron-okb.ru
+
+If you need textures with no lighting 
+for construct your own lightmaps 
+you can download it too and normal map package.

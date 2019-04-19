@@ -51,6 +51,18 @@ public class ResourceR8 : MonoBehaviour {
             misslelate1 = 3;
         }
         misslelate1--;
+
+        if (Input.GetKey("y") && misslelate1 <= 0)
+        {
+            GameObject go = Resources.Load<GameObject>("Prefabs/Game/Capsule");
+            int m = Random.Range(1, 10);
+            int n = Random.Range(1, 10);
+            go.transform.position = new Vector3(10+m, 39, 8+ n);
+
+            Instantiate(go);
+            misslelate1 = 5;
+        }
+
         if (Input.GetKey("t") && misslelate2 <= 0)
         {
             GameObject go = Resources.Load<GameObject>("Prefabs/Game/Capsule");

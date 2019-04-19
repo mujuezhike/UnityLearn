@@ -66,15 +66,15 @@ public class Tank : MonoBehaviour {
             this.transform.Rotate(Vector3.up, 3);
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            this.transform./*Find("Main Camera").*/Rotate(Vector3.forward, 3);
-        }
-        //Zoom in
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
-            this.transform./*Find("Main Camera").*/ Rotate(Vector3.back, 3);
-        }
+        //if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        //{
+        //    this.transform./*Find("Main Camera").*/Rotate(Vector3.forward, 3);
+        //}
+        ////Zoom in
+        //if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        //{
+        //    this.transform./*Find("Main Camera").*/ Rotate(Vector3.back, 3);
+        //}
         //int m = Random.Range(0, 10);
 
         if (Input.GetKey("space") )

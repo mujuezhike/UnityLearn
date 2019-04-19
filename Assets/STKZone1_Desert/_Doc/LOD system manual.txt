@@ -1,0 +1,13 @@
+LOD system is very simple and effective.
+In "Scripts" folder you can see "TerrainLOD.cs" file. 
+You can customize or upgrade LOD system functionality as you wish in future. 
+
+Some actions for change LOD distances:
+
+1. Open the file
+2. Change the values of "DistanceLOD1" and "DistanceLOD2" variables
+3. Change "UpdateInterval" if you want to switch meshes more fast or slow.
+4. Now you must reassign the script to our zones, select meshes and 
+   click main menu item "Custom->Assign Terrain LOD".
+5. Check LOD variables values in terrain meshes.
+

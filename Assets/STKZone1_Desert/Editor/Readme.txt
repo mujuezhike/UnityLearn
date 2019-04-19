@@ -1,0 +1,1 @@
+Please, extract "Editor.zip" contents to your "Editor" folder in project root.

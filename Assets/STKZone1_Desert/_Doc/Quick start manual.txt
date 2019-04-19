@@ -1,0 +1,13 @@
+Hello!
+
+The package is ready for using, just some actions:
+
+1. Import the package with all files.
+2. From Assets/STKZone1_Desert/Editor/Editor.zip file unpack 
+   contents to Assets/Editor directory. If it doesn't exist, create it.
+3. In render settings apply your own skybox. (optional)
+
+That's all, terrain is ready for using. 
+It is already with mesh colliders generated for "High" LOD meshes.
+
+You can create game controllers and try to running on 25 sq. km

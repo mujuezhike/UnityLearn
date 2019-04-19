@@ -28,7 +28,7 @@ public class BulletInner : MonoBehaviour {
         this.transform.Translate(Vector3.left * 0.001f * (m1-5), Space.Self);
         this.transform.Translate(Vector3.up * 0.001f * (m2 - 5), Space.Self);
 
-        if (io < 10)
+        if (io < 20)
         {
             if (io < -30)
             {
@@ -39,12 +39,13 @@ public class BulletInner : MonoBehaviour {
         }
         io--;
 
-        if(this.transform.position.y <= -0.85f)
+        if(this.transform.position.y <= -0.75f  && io < 10)
         {
             GameObject go = GameObject.Instantiate<GameObject>(expo);
             go.transform.position = this.transform.position;
             go.SetActive(true);
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject,1);
         }
     }
 
@@ -71,13 +72,20 @@ public class BulletInner : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject go = GameObject.Instantiate<GameObject>(expo);
-        go.transform.position = this.transform.position;
-        go.SetActive(true);
-        //GameObject go2 = GameObject.Instantiate<GameObject>(expo);
-        //go2.transform.position = this.transform.position;
-        //go2.SetActive(true);
-        Destroy(this.gameObject);
+            JinZiTaBlocks jb = collision.gameObject.GetComponent<JinZiTaBlocks>();
+            if (null != jb)
+            {
+                jb.hp--;
+            }
+            GameObject go = GameObject.Instantiate<GameObject>(expo);
+            go.transform.position = this.transform.position;
+            go.SetActive(true);
+            //GameObject go2 = GameObject.Instantiate<GameObject>(expo);
+            //go2.transform.position = this.transform.position;
+            //go2.SetActive(true);
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject, 1);
+        
     }
 
 }

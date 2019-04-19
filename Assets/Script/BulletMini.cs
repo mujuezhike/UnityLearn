@@ -17,12 +17,18 @@ public class BulletMini : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        JinZiTaBlocks jb = collision.gameObject.GetComponent<JinZiTaBlocks>();
+        if (null != jb)
+        {
+            jb.hp--;
+        }
         GameObject go = GameObject.Instantiate<GameObject>(expo);
         go.transform.position = this.transform.position;
         go.SetActive(true);
         //GameObject go2 = GameObject.Instantiate<GameObject>(expo);
         //go2.transform.position = this.transform.position;
         //go2.SetActive(true);
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
+        Destroy(this.gameObject,1);
     }
 }
