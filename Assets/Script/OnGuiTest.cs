@@ -22,14 +22,14 @@ public class OnGuiTest : MonoBehaviour {
 
     private void OnGUI()
     {
-        
-        GUI.Label(new Rect(50, 50, 504, 183), new GUIContent("HelloWorld"), guistyle);
-        bool rr = GUI.Button(new Rect(50, 150, 204, 100), "测试按钮");
-        bool rp = GUI.RepeatButton(new Rect(50, 300, 204, 100), "炸弹");
-        if (rr)
-        {
-            Debug.Log("按钮被按下了");
-        }
+
+        GUI.Label(new Rect(50, 50, 504, 183), new GUIContent("任务:摧毁金字塔"), guistyle);
+        //bool rr = GUI.Button(new Rect(50, 150, 204, 100), "测试按钮");
+        bool rp = GUI.RepeatButton(new Rect(50, 300, 204, 100), "空中轰炸");
+        //if (rr)
+        //{
+        //    Debug.Log("按钮被按下了");
+        //}
         if (rp && misslelate1 <= 0)
         {
             GameObject go = Resources.Load<GameObject>("Prefabs/Game/Capsule");
@@ -39,20 +39,20 @@ public class OnGuiTest : MonoBehaviour {
         }
         misslelate1--;
 
-        Vector3 vc3 = Camera.main.WorldToScreenPoint(got.transform.position);
+        //Vector3 vc3 = Camera.main.WorldToScreenPoint(got.transform.position);
         //Debug.Log(vc3.x + "|" + vc3.y + "|" + vc3.z);
-        if (vc3.z < 40 || vc3.z > 0)
-        {
-            GUI.DrawTexture(new Rect(
-                vc3.x-70, 
-                Screen.height-vc3.y-(80-vc3.z*2)-30, 
-                100 - 2.2f * vc3.z * 1f, 
-                40- vc3.z * 1f),img);
-            GUI.DrawTexture(new Rect(
-                vc3.x - 70+(100 - 2.2f*vc3.z * 1f),
-                Screen.height - vc3.y - (80 - vc3.z*2) - 30,
-                100 - 2.2f *vc3.z * 1f,
-                40 - vc3.z * 1f), img2);
-        }
+        //if (vc3.z < 40 || vc3.z > 0)
+        //{
+        //    GUI.DrawTexture(new Rect(
+        //        vc3.x-70, 
+        //        Screen.height-vc3.y-(80-vc3.z*2)-30, 
+        //        100 - 2.2f * vc3.z * 1f, 
+        //        40- vc3.z * 1f),img);
+        //    GUI.DrawTexture(new Rect(
+        //        vc3.x - 70+(100 - 2.2f*vc3.z * 1f),
+        //        Screen.height - vc3.y - (80 - vc3.z*2) - 30,
+        //        100 - 2.2f *vc3.z * 1f,
+        //        40 - vc3.z * 1f), img2);
+        //}
     }
 }
