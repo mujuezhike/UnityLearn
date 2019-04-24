@@ -345,7 +345,6 @@
     <None Include="Assets\STKZone1_Desert\_Doc\LOD system manual.txt" />
     <None Include="Assets\STKZone1_Desert\_Doc\Quick start manual.txt" />
     <None Include="Assets\STKZone1_Desert\_Readme.txt" />
-    <None Include="Assets\SpaceGUI\fonts\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
