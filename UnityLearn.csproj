@@ -286,6 +286,7 @@
     <Compile Include="Assets\Script\BaseRandom.cs" />
     <Compile Include="Assets\Script\BaseSphere.cs" />
     <Compile Include="Assets\Script\BehaviourScript.cs" />
+    <Compile Include="Assets\Script\BigEument\RoundForce.cs" />
     <Compile Include="Assets\Script\BulletInner.cs" />
     <Compile Include="Assets\Script\BulletMini.cs" />
     <Compile Include="Assets\Script\CameraScript.cs" />
@@ -295,6 +296,23 @@
     <Compile Include="Assets\Script\CmMoon3.cs" />
     <Compile Include="Assets\Script\Earth.cs" />
     <Compile Include="Assets\Script\Eye.cs" />
+    <Compile Include="Assets\Script\HuiJi\BulletJG.cs" />
+    <Compile Include="Assets\Script\HuiJi\BulletN.cs" />
+    <Compile Include="Assets\Script\HuiJi\BulletR.cs" />
+    <Compile Include="Assets\Script\HuiJi\EnemyEfdTest.cs" />
+    <Compile Include="Assets\Script\HuiJi\EnemyLive\EnemyEfdRoundKeeper.cs" />
+    <Compile Include="Assets\Script\HuiJi\GridMeshScript.cs" />
+    <Compile Include="Assets\Script\HuiJi\LiveDamage.cs" />
+    <Compile Include="Assets\Script\HuiJi\LiveHealth.cs" />
+    <Compile Include="Assets\Script\HuiJi\LiveObject.cs" />
+    <Compile Include="Assets\Script\HuiJi\LiveStatus.cs" />
+    <Compile Include="Assets\Script\HuiJi\Manage\BulletFactory.cs" />
+    <Compile Include="Assets\Script\HuiJi\Manage\SceneTurnManager.cs" />
+    <Compile Include="Assets\Script\HuiJi\Rotateim.cs" />
+    <Compile Include="Assets\Script\HuiJi\Rotatemuxing.cs" />
+    <Compile Include="Assets\Script\HuiJi\RotateTest.cs" />
+    <Compile Include="Assets\Script\HuiJi\TeiMeshScript.cs" />
+    <Compile Include="Assets\Script\HuiJi\TrangleMeshScript.cs" />
     <Compile Include="Assets\Script\JinZiTaBlocks.cs" />
     <Compile Include="Assets\Script\Lunzi.cs" />
     <Compile Include="Assets\Script\MissileGroup.cs" />
@@ -302,7 +320,6 @@
     <Compile Include="Assets\Script\PositionTest.cs" />
     <Compile Include="Assets\Script\ResourceR8.cs" />
     <Compile Include="Assets\Script\RotateBase.cs" />
-    <Compile Include="Assets\Script\RotateTest.cs" />
     <Compile Include="Assets\Script\RotateY.cs" />
     <Compile Include="Assets\Script\Saturn.cs" />
     <Compile Include="Assets\Script\SaturnShadow.cs" />
@@ -328,6 +345,7 @@
     <None Include="Assets\STKZone1_Desert\_Doc\LOD system manual.txt" />
     <None Include="Assets\STKZone1_Desert\_Doc\Quick start manual.txt" />
     <None Include="Assets\STKZone1_Desert\_Readme.txt" />
+    <None Include="Assets\SpaceGUI\fonts\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
