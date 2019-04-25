@@ -39,6 +39,17 @@ public class BulletN : MonoBehaviour,LiveObject
 
     private void OnTriggerEnter(Collider other)
     {
+        MonoBehaviour mb = other.gameObject.GetComponent<MonoBehaviour>();
+        if (mb is LiveObject)
+        {
+            LiveObject lo = (mb as LiveObject);
+            LiveDamage ld = new LiveDamage();
+            ld.Damage = 25;
+            ld.Source = this;
+            ld.Target = lo;
+
+            lo.OnDamage(ld);
+        }
         OnDesTory();
     }
 
@@ -86,5 +97,10 @@ public class BulletN : MonoBehaviour,LiveObject
         //Debug.Log("Run OnDesTory");
         //this.gameObject.SetActive(false);
         Destroy(this.gameObject);
+    }
+
+    public GameObject GetGameObject()
+    {
+        return this.gameObject;
     }
 }

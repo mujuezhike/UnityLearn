@@ -18,11 +18,8 @@ public class CmMoon3 : MonoBehaviour {
 	void Update () {
         int i = Random.Range(0, 100);
         Vector3 def = new Vector3(1, 1, 1);
-        if (null != v3)
-        {
-            def = v3;
-        }
-
+        def = v3;
+        
         this.transform.RotateAround(CubeAxis.gameObject.transform.position, def, o);
         this.transform.LookAt(CubeAxis.gameObject.transform);
         if (i < 5) { 

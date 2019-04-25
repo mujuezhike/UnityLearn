@@ -17,6 +17,10 @@ public class RoundForce : MonoBehaviour {
     private int ie = 0;
     private int kr = 10;
     private int kjg = -1;
+    private string oldDirect = "";
+    private float startPosition = 1;
+    private bool turnflag = false;
+    public static bool dead = false;
     // Use this for initialization
     void Start () {
         
@@ -62,62 +66,59 @@ public class RoundForce : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        /*
-        for (var i=0;i<list.Count;i++)
+        if (dead)
         {
-            for (var j = 0; j < list.Count; j++)
-            {
-
-                if (i != j)
-                {
-                    Vector3 f = list[j].transform.position - list[i].transform.position;
-                    f = Vector3.Normalize(f);
-
-                    float lth = Vector3.Distance(list[i].transform.position, list[j].transform.position);
-
-                    list[i].GetComponent<Rigidbody>().AddForce(f * 1000 / (lth * lth));
-                }
-
-            }
-
+            return;
         }
-        */
 
-        //Vector3 f12de = o2.transform.position - o1.transform.position;
-        //f12de = Vector3.Normalize(f12de);
-        //Vector3 f21de = o1.transform.position - o2.transform.position;
-        //f21de = Vector3.Normalize(f21de);
+        bool isW = Input.GetKey("w");
+        bool isS = Input.GetKey("s");
+        bool isA = Input.GetKey("a");
+        bool isD = Input.GetKey("d");
+        string director = "";
 
-        /**
-        Vector3 f13de = o3.transform.position - o1.transform.position;
-        f13de = Vector3.Normalize(f13de);
-        Vector3 f31de = o1.transform.position - o3.transform.position;
-        f31de = Vector3.Normalize(f31de);
+        if (isW && isS)
+        {
+            isS = false;
+        }
 
-        Vector3 f23de = o3.transform.position - o2.transform.position;
-        f23de = Vector3.Normalize(f23de);
-        Vector3 f32de = o2.transform.position - o3.transform.position;
-        f32de = Vector3.Normalize(f32de);
-        **/
+        if (isA && isD)
+        {
+            isD = false;
+        }
 
-        //float ff = Vector3.Distance(o1.transform.position, o2.transform.position);
-
-        /**
-        float f13 = Vector3.Distance(o1.transform.position, o3.transform.position);
-        float f23 = Vector3.Distance(o3.transform.position, o2.transform.position);
-
-        o1.GetComponent<Rigidbody>().AddForce(f13de * 1000 / (f13 * f13));
-
-        o2.GetComponent<Rigidbody>().AddForce(f23de * 1000 / (f23 * f23));
-
-        o3.GetComponent<Rigidbody>().AddForce(f31de * 1000 / (f13 * f13));
-        o3.GetComponent<Rigidbody>().AddForce(f32de * 1000 / (f23 * f23));
-        **/
-
-        //o1.GetComponent<Rigidbody>().AddForce(f12de * 1000 / (ff * ff));
-        //o2.GetComponent<Rigidbody>().AddForce(f21de * 1000 / (ff * ff));
+        if (isW)
+        {
+            director += "w";
+        }
+        if (isS)
+        {
+            director += "s";
+        }
+        if (isA)
+        {
+            director += "a";
+        }
+        if (isD)
+        {
+            director += "d";
+        }
         
-        if (Input.GetKey("w"))
+        //if (isW && oldDirect=="s")
+        //{
+        //    isW = false;
+        //    turnflag = true;
+        //}
+
+        //if (isS && oldDirect == "w")
+        //{
+        //    isS = false;
+        //    turnflag = true;
+        //}
+
+        //=================================move==============================
+
+        if (isW)
         {
             c.transform.Translate(0,0.33f,0, Space.World);
         }
@@ -130,11 +131,11 @@ public class RoundForce : MonoBehaviour {
             c.transform.Rotate(new Vector3(-60, 0, 0));
         }
 
-        if (Input.GetKey("a"))
+        if (isA)
         {
             c.transform.Translate(-0.33f, 0, 0);
         }
-        if (Input.GetKey("s"))
+        if (isS)
         {
             c.transform.Translate(0, -0.33f, 0,Space.World);
         }
@@ -148,7 +149,7 @@ public class RoundForce : MonoBehaviour {
         }
 
 
-        if (Input.GetKey("d"))
+        if (isD)
         {
             c.transform.Translate(0.33f, 0, 0);
         }
@@ -162,6 +163,7 @@ public class RoundForce : MonoBehaviour {
         if (Input.GetKey("u") && kr<0)
         {
             GameObject go = GameObject.Instantiate<GameObject>(b);
+            go.layer = 12;
             go.transform.position = c.transform.position + new Vector3(1, 0, 0);
             BulletN bn = go.GetComponent<BulletN>();
             bn.Speed = new Vector3(0.5f, 0, 0);
@@ -174,6 +176,7 @@ public class RoundForce : MonoBehaviour {
         if (Input.GetKey("i") && kr < 0)
         {
             GameObject go = GameObject.Instantiate<GameObject>(br);
+            go.layer = 12;
             go.transform.position = c.transform.position + new Vector3(1, 0, 0);
             BulletR bn = go.GetComponent<BulletR>();
             bn.target = ct;
@@ -192,25 +195,109 @@ public class RoundForce : MonoBehaviour {
             
 
             GameObject go = GameObject.Instantiate<GameObject>(bjg);
+            go.layer = 12;
             go.transform.position = c.transform.position + new Vector3(1, 0, 0);
-            if (Input.GetKey("w") && !Input.GetKey("s"))
+            if (director == "w")
             {
                 qe = Quaternion.Euler(0, 0, -45);
                 qec = Quaternion.Euler(0, 0, 45);
-                go.transform.Translate(0.15f,-0.15f,0);
+                go.transform.Translate(0.15f, -0.15f, 0);
             }
-            if (Input.GetKey("s") && !Input.GetKey("w"))
+            if (director == "s")
             {
                 qe = Quaternion.Euler(0, 0, 45);
                 qec = Quaternion.Euler(0, 0, -45);
-                go.transform.Translate(-0.15f, +0.15f, 0);
+                go.transform.Translate(-0.15f, 0.15f, 0);
             }
+            if (director == "wd")
+            {
+                qe = Quaternion.Euler(0, 0, -90);
+                qec = Quaternion.Euler(0, 0, 90);
+                go.transform.Translate(0.15f, -0.15f, 0);
+            }
+            if (director == "wa")
+            {
+                qe = Quaternion.Euler(0, 0, -30);
+                qec = Quaternion.Euler(0, 0, 30);
+                go.transform.Translate(0.15f, -0.15f, 0);
+            }
+            if (director == "sd")
+            {
+                qe = Quaternion.Euler(0, 0, 90);
+                qec = Quaternion.Euler(0, 0, -90);
+                go.transform.Translate(-0.15f, 0.15f, 0);
+            }
+            if (director == "sa")
+            {
+                qe = Quaternion.Euler(0, 0, 30);
+                qec = Quaternion.Euler(0, 0, -30);
+                go.transform.Translate(-0.15f, 0.15f, 0);
+            }
+            //if (isW && oldDirect != "s")
+            //{
+            //    go.transform.position = c.transform.position + new Vector3(0.7f, 0, 0);
+            //    qe = Quaternion.Euler(0, 0, -45);
+            //    qec = Quaternion.Euler(0, 0, 45);
+            //    go.transform.Translate(0.15f,-0.15f,0);
+            //}
+            //if (isW && oldDirect == "s")
+            //{
+            //    qe = Quaternion.Euler(0, 0, -45);
+            //    qec = Quaternion.Euler(0, 0, 45);
+            //    go.transform.Translate(0.15f, -0.15f, 0);
+            //}
+            //if (isS && oldDirect != "w")
+            //{
+
+            //    qe = Quaternion.Euler(0, 0, 45);
+            //    qec = Quaternion.Euler(0, 0, -45);
+            //    go.transform.Translate(-0.15f, +0.15f, 0);
+            //}
+            //if (isS && oldDirect == "w")
+            //{
+            //    go.transform.position = c.transform.position + new Vector3(0.7f, 0, 0);
+            //    qe = Quaternion.Euler(0, 0, 45);
+            //    qec = Quaternion.Euler(0, 0, -45);
+            //    go.transform.Translate(-0.15f, +0.15f, 0);
+            //}
+
+
+            //if (!isS && !isW && oldDirect == "w")
+            //{
+            //    go.transform.position = c.transform.position + new Vector3(0.7f, 0, 0);
+            //}
+            //if (!isS && !isW && oldDirect == "s")
+            //{
+            //    go.transform.position = c.transform.position + new Vector3(0.7f, 0, 0);
+            //}
             go.transform.rotation *= qe;
             BulletJG bn = go.GetComponent<BulletJG>();
             bn.Speed = (qec)*new Vector3(0.3f, 0, 0);
             bn.isRun = true;
             go.SetActive(true);
 
+
+            //fix old 
+            if (isW )
+            {
+                oldDirect = "w";
+            }
+            else if (isS)
+            {
+                oldDirect = "s";
+            }
+            else if (isA)
+            {
+                oldDirect = "a";
+            }
+            else if (isD)
+            {
+                oldDirect = "d";
+            }
+            else
+            {
+                oldDirect = "";
+            }
         }
     }
 }

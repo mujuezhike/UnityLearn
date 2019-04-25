@@ -5,12 +5,11 @@ using System.Text;
 
 namespace Assets.Script.HuiJi
 {
-    public class LiveStatus
+    public interface LiveStatus
     {
-        public int StatusInt { get; set; }
-
-        public LiveObject Source { get; set; }
-
-        public LiveObject Target { get; set; }
+        int GetStatusInt();
+        LiveObject GetSource();
+        LiveObject GetTarget();
+        void Show();
     }
 }

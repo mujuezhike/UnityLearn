@@ -43,9 +43,5 @@ public class RotateTest : MonoBehaviour {
         Quaternion qn1 = Quaternion.Euler(new Vector3(89, 20, 20));
         gos3.transform.rotation = qn1;
 
-        float mx = Input.GetAxis("Mouse X");
-
-        float my = Input.GetAxis("Mouse Y");
-
     }
 }

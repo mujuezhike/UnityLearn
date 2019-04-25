@@ -97,4 +97,9 @@ public class EnemyEfdRoundKeeper : MonoBehaviour, LiveObject
 
         bulletRank--;
     }
+
+    public GameObject GetGameObject()
+    {
+        return this.gameObject;
+    }
 }

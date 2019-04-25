@@ -28,6 +28,7 @@ public class BulletJG : MonoBehaviour, LiveObject
         if (isRun)
         {
             this.transform.Translate(Speed);
+            //this.transform.rotation *= Quaternion.Euler(1, 0, 0);
         }
         liveTime--;
         if (liveTime < 0)
@@ -39,6 +40,17 @@ public class BulletJG : MonoBehaviour, LiveObject
 
     private void OnTriggerEnter(Collider other)
     {
+        MonoBehaviour mb = other.gameObject.GetComponent<MonoBehaviour>();
+        if (mb is LiveObject)
+        {
+            LiveObject lo = (mb as LiveObject);
+            LiveDamage ld = new LiveDamage();
+            ld.Damage = 3;
+            ld.Source = this;
+            ld.Target = lo;
+
+            lo.OnDamage(ld);
+        }
         OnDesTory();
     }
 
@@ -86,5 +98,10 @@ public class BulletJG : MonoBehaviour, LiveObject
         //Debug.Log("Run OnDesTory");
         //this.gameObject.SetActive(false);
         Destroy(this.gameObject);
+    }
+
+    public GameObject GetGameObject()
+    {
+        return this.gameObject;
     }
 }

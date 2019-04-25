@@ -7,7 +7,8 @@ public class SceneTurnManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        //Coroutine e1 = StartCoroutine("Test");
+        //StopCoroutine(e1);
 	}
 	
 	// Update is called once per frame
@@ -16,5 +17,14 @@ public class SceneTurnManager : MonoBehaviour {
         //{
         //    SceneManager.LoadScene("Resources/Scene/SMScene");
         //}
+        //StopCoroutine("");
 	}
+
+    IEnumerator Test()
+    {
+        Debug.Log("JMDS1");
+        yield return new WaitForFixedUpdate();
+        Debug.Log("JMDS2");
+    }
+    
 }

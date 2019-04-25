@@ -12,6 +12,5 @@ public class Rotateim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         this.transform.Rotate(new Vector3(0.05f, 0, 0), Space.World);
-        Quaternion qn = new Quaternion();
     }
 }

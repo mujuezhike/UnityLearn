@@ -12,7 +12,7 @@ public class GridMeshScript : MonoBehaviour {
     private void Awake()
     {
         MeshFilter mf = this.GetComponent<MeshFilter>();
-        MeshRenderer mr = this.GetComponent<MeshRenderer>();
+       // MeshRenderer mr = this.GetComponent<MeshRenderer>();
 
         Vector3[] vertices = new Vector3[24];
         int[] triangles = new int[36];

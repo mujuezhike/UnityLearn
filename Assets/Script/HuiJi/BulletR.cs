@@ -79,6 +79,17 @@ namespace Assets.Script.HuiJi
 
         private void OnTriggerEnter(Collider other)
         {
+            MonoBehaviour mb = other.gameObject.GetComponent<MonoBehaviour>();
+            if (mb is LiveObject)
+            {
+                LiveObject lo = (mb as LiveObject);
+                LiveDamage ld = new LiveDamage();
+                ld.Damage = 3;
+                ld.Source = this;
+                ld.Target = lo;
+
+                lo.OnDamage(ld);
+            }
             OnDesTory();
         }
 
@@ -126,6 +137,11 @@ namespace Assets.Script.HuiJi
             //Debug.Log("Run OnDesTory");
             //this.gameObject.SetActive(false);
             Destroy(this.gameObject);
+        }
+
+        public GameObject GetGameObject()
+        {
+            return this.gameObject;
         }
     }
 }

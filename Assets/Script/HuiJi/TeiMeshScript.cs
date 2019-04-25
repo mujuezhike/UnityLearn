@@ -8,7 +8,7 @@ public class TeiMeshScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         MeshFilter mf = this.GetComponent<MeshFilter>();
-        MeshRenderer mr = this.GetComponent<MeshRenderer>();
+        //MeshRenderer mr = this.GetComponent<MeshRenderer>();
 
         Vector3[] vertices = new Vector3[36];
         int[] triangles = new int[36];
