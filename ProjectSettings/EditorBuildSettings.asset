@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Resources/Scene/BigEument.unity
     guid: 5e87ff13b5185774a92118d1bc6a3a1a
   - enabled: 1
-    path: Assets/Resources/Scene/SMScene.unity
-    guid: 63a518190f52afe4091602ba319ea6cf
+    path: Assets/Resources/Scene/Menu.unity
+    guid: 6ce6f07c6c5619b4f9df23eb559913a5

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - BaseObj
+  - Plane1
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - TankMe
   - none
   - PlayerBullet
-  - 
-  - 
+  - Back
+  - BackMain
   - 
   - 
   - 

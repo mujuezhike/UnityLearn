@@ -67,7 +67,9 @@ namespace Assets.Script.HuiJi
                     this.transform.Translate(tm * coreSpeed);
                     }
                 }
-                
+                //this.transform.LookAt(target.transform);
+
+
             }
             liveTime--;
             if (liveTime < -100)

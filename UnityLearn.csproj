@@ -301,7 +301,9 @@
     <Compile Include="Assets\Script\HuiJi\BulletN.cs" />
     <Compile Include="Assets\Script\HuiJi\BulletR.cs" />
     <Compile Include="Assets\Script\HuiJi\EnemyEfdTest.cs" />
+    <Compile Include="Assets\Script\HuiJi\EnemyLive\EnemyDroneSciFi0.cs" />
     <Compile Include="Assets\Script\HuiJi\EnemyLive\EnemyEfdRoundKeeper.cs" />
+    <Compile Include="Assets\Script\HuiJi\EnemyLive\EnemyKM.cs" />
     <Compile Include="Assets\Script\HuiJi\GridMeshScript.cs" />
     <Compile Include="Assets\Script\HuiJi\InvokeTest.cs" />
     <Compile Include="Assets\Script\HuiJi\InvokeTest2.cs" />
@@ -309,11 +311,14 @@
     <Compile Include="Assets\Script\HuiJi\LiveHealth.cs" />
     <Compile Include="Assets\Script\HuiJi\LiveObject.cs" />
     <Compile Include="Assets\Script\HuiJi\LiveStatus.cs" />
+    <Compile Include="Assets\Script\HuiJi\LiveStatusImpl\OnDamagedStatus.cs" />
     <Compile Include="Assets\Script\HuiJi\LiveStatusImpl\UnDamagedStatus.cs" />
     <Compile Include="Assets\Script\HuiJi\Manage\BulletFactory.cs" />
+    <Compile Include="Assets\Script\HuiJi\Manage\EnemyCreateManager.cs" />
     <Compile Include="Assets\Script\HuiJi\Manage\PlayerMainShip.cs" />
     <Compile Include="Assets\Script\HuiJi\Manage\PlayerStatusManager.cs" />
     <Compile Include="Assets\Script\HuiJi\Manage\SceneTurnManager.cs" />
+    <Compile Include="Assets\Script\HuiJi\Manage\StartMenu\StartMenuManager.cs" />
     <Compile Include="Assets\Script\HuiJi\Rotateim.cs" />
     <Compile Include="Assets\Script\HuiJi\Rotatemuxing.cs" />
     <Compile Include="Assets\Script\HuiJi\RotateTest.cs" />

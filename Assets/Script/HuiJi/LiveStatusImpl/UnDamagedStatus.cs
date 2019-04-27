@@ -36,7 +36,7 @@ public class UnDamagedStatus : LiveStatus {
 
     public void Show()
     {
-        Debug.Log(circle);
+        //Debug.Log(circle);
         if (null == sd)
         {
             sd = new List<Material>();
@@ -50,6 +50,7 @@ public class UnDamagedStatus : LiveStatus {
                 {
                     sd.Add(ml);
                     oldColors.Add(ml.color);
+                    
                 }
             }
                

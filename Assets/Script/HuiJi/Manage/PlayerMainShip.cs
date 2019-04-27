@@ -6,9 +6,9 @@ using System;
 
 public class PlayerMainShip : MonoBehaviour, LiveObject
 {
-    public int maxHp = 1000;
+    public int maxHp = 30;
 
-    public int hp = 1000;
+    public int hp = 30;
 
     public List<LiveStatus> statusList = new List<LiveStatus>();
 
@@ -32,6 +32,7 @@ public class PlayerMainShip : MonoBehaviour, LiveObject
 
     public void OnDamage(LiveDamage ld)
     {
+        //Debug.Log(hp);
         if(!statusList.Contains(UnDamagedStatus.compareObject))
         {
             hp -= ld.Damage;
@@ -82,8 +83,9 @@ public class PlayerMainShip : MonoBehaviour, LiveObject
     public void OnDesTory()
     {
         RoundForce.dead = true;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
         //Destroy();
+
     }
 
     public GameObject GetGameObject()

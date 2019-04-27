@@ -10,7 +10,7 @@ public class BulletN : MonoBehaviour,LiveObject
 
     private int hp = 5;
 
-    private int liveTime = 1000;
+    private int liveTime = 500;
     public Vector3 Speed { get; set; }
 
     public bool isRun = false;

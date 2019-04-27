@@ -13,7 +13,6 @@ public class RoundForce : MonoBehaviour {
     public GameObject c;
     public GameObject ct;
 
-
     private int ie = 0;
     private int kr = 10;
     private int kjg = -1;
@@ -23,7 +22,7 @@ public class RoundForce : MonoBehaviour {
     public static bool dead = false;
     // Use this for initialization
     void Start () {
-        
+
         //int m = 3;
 
         //for (int i=0;i<m;i++)
@@ -65,9 +64,9 @@ public class RoundForce : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
         if (dead)
         {
+
             return;
         }
 
