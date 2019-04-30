@@ -291,6 +291,15 @@
     <Compile Include="Assets\Script\BulletMini.cs" />
     <Compile Include="Assets\Script\CameraScript.cs" />
     <Compile Include="Assets\Script\CapsuleBomb.cs" />
+    <Compile Include="Assets\Script\Chang\AddForceTest.cs" />
+    <Compile Include="Assets\Script\Chang\ChangScript.cs" />
+    <Compile Include="Assets\Script\Chang\CubeCom1.cs" />
+    <Compile Include="Assets\Script\Chang\CubeCom2.cs" />
+    <Compile Include="Assets\Script\Chang\LineCube.cs" />
+    <Compile Include="Assets\Script\Chang\LoadScene.cs" />
+    <Compile Include="Assets\Script\Chang\LoadSceneV5.cs" />
+    <Compile Include="Assets\Script\Chang\RayTest.cs" />
+    <Compile Include="Assets\Script\Chang\StartMenu.cs" />
     <Compile Include="Assets\Script\CmMoon.cs" />
     <Compile Include="Assets\Script\CmMoon2.cs" />
     <Compile Include="Assets\Script\CmMoon3.cs" />
@@ -335,6 +344,8 @@
     <Compile Include="Assets\Script\RotateY.cs" />
     <Compile Include="Assets\Script\Saturn.cs" />
     <Compile Include="Assets\Script\SaturnShadow.cs" />
+    <Compile Include="Assets\Script\ShenMin\BugS.cs" />
+    <Compile Include="Assets\Script\ShenMin\QinCaoS.cs" />
     <Compile Include="Assets\Script\Sun.cs" />
     <Compile Include="Assets\Script\Sword.cs" />
     <Compile Include="Assets\Script\Tank.cs" />

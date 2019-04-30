@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scene/Menu.unity
     guid: 6ce6f07c6c5619b4f9df23eb559913a5
+  - enabled: 1
+    path: Assets/Resources/Scene/ChangStart.unity
+    guid: 1907065d55a99ed41ae7ef53c1456a49
+  - enabled: 1
+    path: Assets/Resources/Scene/Chang.unity
+    guid: 1b756ef62aaa5db4c8a5e9dfab5eb301
